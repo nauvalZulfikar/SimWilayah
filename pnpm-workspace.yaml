@@ -1,0 +1,19 @@
+packages:
+  - apps/*
+  - packages/*
+
+# pnpm 11 reads these from here (not .npmrc / package.json).
+# Don't re-verify deps before each `pnpm run` — on a hardened pnpm (blocked build
+# scripts), that check exits non-zero and blocks dev/test even though the app runs.
+verifyDepsBeforeRun: false
+# Packages allowed to run install build scripts (their prebuilt binaries are used
+# anyway; this just keeps `pnpm install` from exiting non-zero on strict machines).
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - unrs-resolver
+  - "@tailwindcss/oxide"
+allowBuilds:
+  esbuild: set this to true or false
+  sharp: set this to true or false
+  unrs-resolver: set this to true or false

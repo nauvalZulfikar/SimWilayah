@@ -1,0 +1,21 @@
+{
+  "name": "@simwilayah/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generic region-policy simulation engine. Domain-agnostic core + pluggable domain models.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./flood": "./src/domains/flood/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vitest": "^2.1.8"
+  }
+}

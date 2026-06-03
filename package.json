@@ -1,0 +1,16 @@
+{
+  "name": "simwilayah",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sandbox simulasi kebijakan daerah — mesin generik + plugin domain. Modul pertama: banjir Tegalluar, Kab. Bandung.",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "start": "pnpm --filter web start",
+    "test": "pnpm --filter @simwilayah/engine test",
+    "test:watch": "pnpm --filter @simwilayah/engine test:watch"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp", "unrs-resolver", "@tailwindcss/oxide"]
+  }
+}
