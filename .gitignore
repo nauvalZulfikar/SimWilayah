@@ -18,3 +18,4 @@ dist/
 next-env.d.ts
 *.log
 tmp/
+graphify-out/
